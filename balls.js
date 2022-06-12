@@ -40,21 +40,11 @@ const ballsDiv = document.createElement("div");
 ballsDiv.classList.add("ballsDiv");
 sectionTwo.append(h1, ballsDiv);
 
-startGame.addEventListener("click", () =>
-  ballsDiv.children[0].classList.add("ballColumn")
-);
-startGame.addEventListener("click", () =>
-  ballsDiv.children[1].classList.add("ballColumn")
-);
-startGame.addEventListener("click", () =>
-  ballsDiv.children[2].classList.add("ballColumn")
-);
-startGame.addEventListener("click", () =>
-  ballsDiv.children[3].classList.add("ballColumn")
-);
+
 
 for (i = 0; i < 4; i++) {
   const ballColumn = document.createElement("div");
+  ballColumn.classList.add("ballColumn")
   ballsDiv.appendChild(ballColumn);
   for (x = 0; x < 150; x++) {
     startGame.addEventListener("click",()=> ball.style.display="block")
