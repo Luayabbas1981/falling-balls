@@ -56,7 +56,8 @@ startGame.addEventListener("click", () =>
 for (i = 0; i < 4; i++) {
   const ballColumn = document.createElement("div");
   ballsDiv.appendChild(ballColumn);
-  for (x = 0; x < 300; x++) {
+  for (x = 0; x < 150; x++) {
+    startGame.addEventListener("click",()=> ball.style.display="block")
     const ball = document.createElement("div");
     ball.classList.add(`ball`);
     ball.style = `margin-top:calc(${Math.floor(Math.random() * 10)}% * ${
@@ -71,8 +72,8 @@ function generateRandomInteger(max) {
 }
 
 for (x = 0; x < 4; x++) {
-  for (j = 0; j < 80; j++) {
-    let randomNum = generateRandomInteger(299);
+  for (j = 0; j < 40; j++) {
+    let randomNum = generateRandomInteger(149);
     sectionTwo.children[1].children[x].children[
       randomNum
     ].style.backgroundColor = "#65d16a";

@@ -67,8 +67,10 @@ h1 {
  align-items: center;
   display: flex;
   flex-flow: wrap column;
-  animation: move 320s 1 alternate  linear;
+  animation: move 140s 1 alternate  linear;
   bottom: 100%;
+  
+  
   
 }
 .ball {
@@ -77,6 +79,8 @@ h1 {
     height: 13vh;
     border-radius: 50%;
     background-color: #ffc107;
+    display: none;
+   
 }
 @keyframes move {
  
@@ -105,7 +109,7 @@ h1 {
         
     }
     .ballColumn{
-        animation: move 220s 1 alternate  linear;
+        animation: move 80s 1 alternate  linear;
     }
    
 }
