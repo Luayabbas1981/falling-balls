@@ -62,12 +62,12 @@ for (i = 0; i < 4; i++) {
 }
 
 function generateRandomInteger(max) {
-  return Math.floor(Math.random() * max) + 1;
+  return Math.floor(Math.random() * max) ;
 }
 
 for (x = 0; x < 4; x++) {
   for (j = 0; j < 40; j++) {
-    let randomNum = generateRandomInteger(149);
+    let randomNum = generateRandomInteger(150);
     sectionTwo.children[1].children[x].children[
       randomNum
     ].style.backgroundColor = "#65d16a";
@@ -78,7 +78,8 @@ for (x = 0; x < 4; x++) {
 }
 
 const balls = document.querySelectorAll(".green");
-//num = balls.length;
+
+console.log(balls);
 let missedNum = 0;
 fremdBallNum.textContent = missedNum;
 balls.forEach((e) => {
@@ -88,7 +89,7 @@ balls.forEach((e) => {
   e.addEventListener("click", () => {
     e.classList.replace("green", "red");
     missedNum++;
-    console.log(missedNum);
+    
     fremdBallNum.textContent = missedNum;
   });
 });

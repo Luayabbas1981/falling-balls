@@ -6,6 +6,7 @@ body{
     height: 100vh;
     background-color: #151515;
     font-family: "Lobster", cursive;
+    width: 100%;
 
     
 }
@@ -25,7 +26,7 @@ span{
 }
 
 .main{
-    display: flex;
+    
    margin-top: 1%;
     height: 100vh;
     display: grid;
@@ -74,7 +75,7 @@ span{
  align-items: center;
   display: flex;
   flex-flow: wrap column;
-  animation: move 144s 1 alternate  linear;
+  animation: move 143s 1 alternate  linear;
   bottom: 100%;
   
   
@@ -133,7 +134,7 @@ span{
 }
 @media (max-width:767px){
     main {
-        grid-template-columns: 15% 1fr;
+        grid-template-columns: auto 1fr;
         
     }
     .ballColumn{
