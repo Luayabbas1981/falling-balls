@@ -1,7 +1,7 @@
 const h1 = document.createElement("h1");
 h1.textContent = "Falling Balls";
 const h2  = document.createElement("h2");
-h2.innerHTML= "Click of <span> green </span> balls"
+h2.innerHTML= "Click on <span> green </span> balls"
 const main = document.createElement("section");
 main.className = "main";
 document.body.appendChild(main);
@@ -15,7 +15,7 @@ startGame.classList.add("startGame");
 startGame.textContent = "Start the Game";
 const fremdBall = document.createElement("div");
 fremdBall.classList.add("fremdBall", "speedDivChild");
-fremdBall.textContent = "You missed :";
+fremdBall.textContent = "Your score :";
 const fremdBallNum = document.createElement("div");
 fremdBallNum.classList.add("fremdBallNum", "speedDivChild");
 const mistakes = document.createElement("div");
@@ -55,7 +55,9 @@ for (i = 0; i < 4; i++) {
     ball.style = `margin-top:calc(${Math.floor(Math.random() * 10)}% * ${
       x / 8
     })`;
+
     ballColumn.appendChild(ball);
+
   }
 }
 
@@ -63,7 +65,7 @@ function generateRandomInteger(max) {
   return Math.floor(Math.random() * max) + 1;
 }
 
-for (x = 0; x < 4; x++) {
+ for (x = 0; x < 4; x++) {
   for (j = 0; j < 40; j++) {
     let randomNum = generateRandomInteger(149);
     sectionTwo.children[1].children[x].children[
@@ -73,23 +75,23 @@ for (x = 0; x < 4; x++) {
       "green"
     );
   }
-}
+} 
 
 const balls = document.querySelectorAll(".green");
 num = balls.length;
-fremdBallNum.textContent = num;
-
+let missedNum = 0 
+fremdBallNum.textContent = missedNum;
 balls.forEach((e) => {
   e.addEventListener("click", () => {
     e.style.backgroundColor = "red";
   });
   e.addEventListener("click", () => {
     e.classList.replace("green", "red");
-    num1--;
-    console.log(num1);
-    fremdBallNum.innerHTML = num1;
+    missedNum++;
+    console.log(missedNum);
+    fremdBallNum.textContent =missedNum;
   });
 });
 const redBalls = document.querySelectorAll(".red");
-num1 = num - redBalls.length;
+//num1 = num - redBalls.length;
 tryAgain.addEventListener("click", () => window.location.reload(true));
