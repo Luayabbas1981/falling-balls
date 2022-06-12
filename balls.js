@@ -18,9 +18,6 @@ fremdBall.classList.add("fremdBall", "speedDivChild");
 fremdBall.textContent = "Your score :";
 const fremdBallNum = document.createElement("div");
 fremdBallNum.classList.add("fremdBallNum", "speedDivChild");
-const mistakes = document.createElement("div");
-mistakes.classList.add("mistakes", "speedDivChild");
-mistakes.textContent = "green balls";
 const remainTimeText = document.createElement("div");
 remainTimeText.classList.add("remainTimeText", "speedDivChild");
 remainTimeText.textContent = "remain time :";
@@ -36,7 +33,7 @@ sectionOne.append(
   remainTime,
   fremdBall,
   fremdBallNum,
-  mistakes,
+  
   tryAgain
 );
 const speedDivChildren = document.querySelectorAll(".speedDivChild");
@@ -96,20 +93,22 @@ balls.forEach((e) => {
   });
 });
 
-let time = 137;
+let time = 140;
 
 startGame.addEventListener("click", () => {
   
   setInterval(countDown, 1000);
   function countDown() {
-    time < 16 ? remainTime.style.color= "#e91e63" : "";
+   time < 16 ? remainTime.classList.replace("remainTime","alarm"): "";
     remainTime.textContent = time;
     time--;
     if(time<=0)
-     time=0
+     time=0;
+    
     }
     
   }
   
 );
+
 tryAgain.addEventListener("click", () => window.location.reload(true));

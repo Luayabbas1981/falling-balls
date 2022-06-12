@@ -74,7 +74,7 @@ span{
  align-items: center;
   display: flex;
   flex-flow: wrap column;
-  animation: move 144s 1 alternate  linear;
+  animation: move 142s 1 alternate  linear;
   bottom: 100%;
   
   
@@ -88,6 +88,10 @@ span{
     background-color: #1d04a8;
     display: none;
    
+}
+.vanish {
+    transform: scale(0);
+    transition: 1s;
 }
 @keyframes move {
  
@@ -112,6 +116,20 @@ span{
 }
 .remainTime{
     color: rgb(13, 0, 255);
+    font-weight: bold;
+}
+.alarm {
+    color: #e91e63;
+    animation: scale .5s 30 alternate;
+    font-weight: bold;
+}
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
 }
 @media (max-width:767px){
     main {
