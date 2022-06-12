@@ -67,7 +67,7 @@ h1 {
  align-items: center;
   display: flex;
   flex-flow: wrap column;
-  animation: move 290s 1 alternate  linear;
+  animation: move 320s 1 alternate  linear;
   bottom: 100%;
 }
 .ball {
