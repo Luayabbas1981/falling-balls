@@ -1,5 +1,7 @@
 const h1 = document.createElement("h1");
 h1.textContent = "Falling Balls";
+const h2  = document.createElement("h2");
+h2.innerHTML= "Click of <span> green </span> balls"
 const main = document.createElement("section");
 main.className = "main";
 document.body.appendChild(main);
@@ -30,7 +32,7 @@ resualtNum.classList.add("resualtNum" ,"speedDivChild"); */
 const tryAgain = document.createElement("button");
 tryAgain.classList.add("tryAgain", "speedDivChild");
 tryAgain.textContent = "Try again";
-sectionOne.append(startGame, fremdBall, fremdBallNum, mistakes, tryAgain);
+sectionOne.append(h2,startGame, fremdBall, fremdBallNum, mistakes, tryAgain);
 const speedDivChildren = document.querySelectorAll(".speedDivChild");
 speedDivChildren.forEach((e) => (e.style.margin = "5%"));
 const sectionTwo = document.createElement("section");
