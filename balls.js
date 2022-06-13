@@ -33,7 +33,7 @@ sectionOne.append(
   remainTime,
   fremdBall,
   fremdBallNum,
-  
+
   tryAgain
 );
 const speedDivChildren = document.querySelectorAll(".speedDivChild");
@@ -62,7 +62,7 @@ for (i = 0; i < 4; i++) {
 }
 
 function generateRandomInteger(max) {
-  return Math.floor(Math.random() * max) ;
+  return Math.floor(Math.random() * max);
 }
 
 for (x = 0; x < 4; x++) {
@@ -79,7 +79,6 @@ for (x = 0; x < 4; x++) {
 
 const balls = document.querySelectorAll(".green");
 
-console.log(balls);
 let missedNum = 0;
 fremdBallNum.textContent = missedNum;
 balls.forEach((e) => {
@@ -89,7 +88,7 @@ balls.forEach((e) => {
   e.addEventListener("click", () => {
     e.classList.replace("green", "red");
     missedNum++;
-    
+
     fremdBallNum.textContent = missedNum;
   });
 });
@@ -97,19 +96,13 @@ balls.forEach((e) => {
 let time = 140;
 
 startGame.addEventListener("click", () => {
-  
   setInterval(countDown, 1000);
   function countDown() {
-   time < 16 ? remainTime.classList.replace("remainTime","alarm"): "";
+    time < 16 ? remainTime.classList.replace("remainTime", "alarm") : "";
     remainTime.textContent = time;
     time--;
-    if(time<=0)
-     time=0;
-    
-    }
-    
+    if (time <= 0) time = 0;
   }
-  
-);
+});
 
-tryAgain.addEventListener("click", () => window.location.reload(true));
+(tryAgain.addEventListener("click", () => window.location.reload(true)))();
