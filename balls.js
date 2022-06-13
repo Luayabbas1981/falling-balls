@@ -105,4 +105,4 @@ startGame.addEventListener("click", () => {
   }
 });
 
-(tryAgain.addEventListener("click", () => window.location.reload(true)))();
+tryAgain.addEventListener("click", () => window.location.reload(true));

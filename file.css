@@ -77,13 +77,13 @@ span{
   flex-flow: wrap column;
   animation: move 143s 1 alternate  linear;
   bottom: 100%;
-  margin-bottom: 8%;
+  
   
   
   
 }
 .ball {
-   margin-bottom: 85%;
+   margin-bottom: 100%;
     width: 70%;
     height: 13vh;
     border-radius: 50%;
