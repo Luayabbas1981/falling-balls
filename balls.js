@@ -67,7 +67,7 @@ function generateRandomInteger(max) {
 
 for (x = 0; x < 4; x++) {
   for (j = 0; j < 40; j++) {
-    let randomNum = generateRandomInteger(150);
+    let randomNum = generateRandomInteger(148);
     sectionTwo.children[1].children[x].children[
       randomNum
     ].style.backgroundColor = "#65d16a";
