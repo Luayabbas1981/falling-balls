@@ -1,7 +1,7 @@
 const h1 = document.createElement("h1");
 h1.textContent = "Falling Balls";
 const h2 = document.createElement("h2");
-h2.innerHTML = "Click on zhe <span> green </span> balls";
+h2.innerHTML = "Click on the <span> green </span> balls";
 const main = document.createElement("section");
 main.className = "main";
 document.body.appendChild(main);
