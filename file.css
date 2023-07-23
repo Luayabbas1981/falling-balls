@@ -1,5 +1,4 @@
-body{
-    
+body {
     margin: 0;
     overflow: hidden;
     user-select: none;
@@ -7,35 +6,29 @@ body{
     background-color: #151515;
     font-family: "Lobster", cursive;
     width: 100%;
-
-    
 }
 h1 {
     color: #9c27b0;
     text-align: center;
     font-size: 1.7vw;
     transform: scaleX(1.3);
-   
 }
-h2{
+h2 {
     text-align: center;
     font-size: 1.5vw;
 }
-span{
+span {
     color: rgb(5, 116, 9);
 }
 
-.main{
-    
-   margin-top: 1%;
+.main {
+    margin-top: 1%;
     height: 100vh;
     display: grid;
     grid-template-columns: 15% 40%;
     justify-content: center;
-   
-    
-   
 }
+
 
 .sectionOne {
     display: flex;
@@ -47,82 +40,77 @@ span{
     background-color: #76909d;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    color:white;
+    color: white;
     font-size: 1.5vw;
 }
 
 .sectionTwo {
     width: 100%;
     height: 80vh;
-    background-color:#ee9e2a;
+    background-color: #ee9e2a;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
 }
-.ballsDiv{
+.ballsDiv {
     display: grid;
-    grid-template-columns:repeat(4 ,20%);
+    grid-template-columns: repeat(4, 20%);
     gap: 4%;
-   justify-content: center;
-   width: 100%;
+    justify-content: center;
+    width: 100%;
     height: 80%;
     overflow: hidden;
-    background-color:#080808;
+    background-color: #080808;
     cursor: pointer;
 }
-.ballColumn{
+.ballColumn {
     height: fit-content;
- position: relative;
- align-items: center;
-  display: flex;
-  flex-flow: wrap column;
-  animation: move 143s 1 alternate  linear;
-  bottom: 100%;
-  
-  
-  
-  
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-flow: wrap column;
+    animation: move 143s 1 alternate linear;
+    bottom: 100%;
 }
 .ball {
-   margin-bottom: 100%;
-    width: 70%;
-    height: 13vh;
+    margin-bottom: 100%;
+    width: 8vw;
+    height: 8vw;
     border-radius: 50%;
     background-color: #1d04a8;
     display: none;
-   
 }
 .vanish {
     transform: scale(0);
     transition: 1s;
 }
 @keyframes move {
- 
-   to {
-       bottom: 0;
-   }
+    to {
+        bottom: 0;
+    }
 }
-.fremdBallNum{
-    color: yellow;
+.fremdBallNum {
+    color: #cddc39;
     font-size: 1.8vw;
 }
-.tryAgain , .startGame {
+.tryAgain,
+.startGame {
     width: fit-content;
     height: 6vh;
     font-size: 1vw;
     border-radius: 1rem;
     cursor: pointer;
-   background-color: #00bcd4;
-   color: white;
+    background-color: #00bcd4;
+    color: white;
     font-family: "Lobster", cursive;
     transform: scaleX(1.3);
 }
-.remainTime{
-    color: rgb(13, 0, 255);
+.remainTime {
+    color: #ffc107;
     font-weight: bold;
 }
 .alarm {
     color: #e91e63;
-    animation: scale .5s 30 alternate;
+    animation: scale 0.5s 30 alternate;
     font-weight: bold;
 }
 @keyframes scale {
@@ -133,13 +121,31 @@ span{
         transform: scale(1.5);
     }
 }
-@media (max-width:767px){
-    main {
-        grid-template-columns: auto 1fr;
-        
+@media (max-width: 767px) {
+    
+    
+    .main{
+        margin-top: 8vh;
+        grid-template-columns: 25% 70%;
     }
-    .ballColumn{
-        animation: move 80s 1 alternate  linear;
+    .ball{
+        width: 15vw;
+        height: 15vw;
     }
-   
+    .ballColumn {
+        animation: move 80s 1 alternate linear;
+    }
+    button{
+        width: 80%;    
+    }
+    .startGame , .tryAgain,h2{
+        font-size: 2.5vw;
+    }
+    .fremdBallNum,.remainTime{
+        font-size: 5vw;
+    }
+    .sectionOne{
+       row-gap: 1rem;
+       font-size: 4vw;
+    }
 }
