@@ -82,10 +82,10 @@ const balls = document.querySelectorAll(".green");
 let missedNum = 0;
 fremdBallNum.textContent = missedNum;
 balls.forEach((e) => {
-  e.addEventListener("click", () => {
+  e.addEventListener("pointerdown", () => {
     e.style.backgroundColor = "#673ab7";
   });
-  e.addEventListener("click", () => {
+  e.addEventListener("pointerdown", () => {
     e.classList.replace("green", "red");
     missedNum++;
 
