@@ -1,41 +1,45 @@
 const h1 = document.createElement("h1");
 h1.textContent = "Falling Balls";
-const h2 = document.createElement("h2");
-h2.innerHTML = "Click on the <span> green </span> balls";
+const h2 = document.createElement("h1");
+h2.innerHTML = "Click on the <span> blue </span> balls";
 const main = document.createElement("section");
 main.className = "main";
 document.body.appendChild(main);
 const sectionOne = document.createElement("section");
 sectionOne.className = "sectionOne";
 main.append(sectionOne);
+const btnContainer = document.createElement("div")
 const speedDiv = document.createElement("div");
 speedDiv.classList.add("speedDiv");
 const startGame = document.createElement("button");
 startGame.classList.add("startGame");
-startGame.textContent = "Start the Game";
+startGame.textContent = "Start";
 const fremdBall = document.createElement("div");
 fremdBall.classList.add("fremdBall", "speedDivChild");
-fremdBall.textContent = "Your score :";
+fremdBall.textContent = "score";
 const fremdBallNum = document.createElement("div");
 fremdBallNum.classList.add("fremdBallNum", "speedDivChild");
 const remainTimeText = document.createElement("div");
 remainTimeText.classList.add("remainTimeText", "speedDivChild");
-remainTimeText.textContent = "remain time :";
+remainTimeText.textContent = "time";
 const remainTime = document.createElement("div");
 remainTime.classList.add("remainTime", "speedDivChild");
 const tryAgain = document.createElement("button");
 tryAgain.classList.add("tryAgain", "speedDivChild");
-tryAgain.textContent = "Try again";
+tryAgain.textContent = "restart";
 sectionOne.append(
   h2,
+  btnContainer,
+ 
+);
+btnContainer.append(
   startGame,
   remainTimeText,
   remainTime,
   fremdBall,
   fremdBallNum,
-
   tryAgain
-);
+)
 const speedDivChildren = document.querySelectorAll(".speedDivChild");
 speedDivChildren.forEach((e) => (e.style.margin = "5%"));
 const sectionTwo = document.createElement("section");
@@ -70,7 +74,7 @@ for (x = 0; x < 4; x++) {
     let randomNum = generateRandomInteger(148);
     sectionTwo.children[1].children[x].children[
       randomNum
-    ].style.backgroundColor = "#65d16a";
+    ].style.backgroundColor = "#03a9f4";
     sectionTwo.children[1].children[x].children[randomNum].classList.add(
       "green"
     );
@@ -83,7 +87,7 @@ let missedNum = 0;
 fremdBallNum.textContent = missedNum;
 balls.forEach((e) => {
   e.addEventListener("click", () => {
-    e.style.backgroundColor = "red";
+    e.style.backgroundColor = "#673ab7";
   });
   e.addEventListener("click", () => {
     e.classList.replace("green", "red");
