@@ -72,12 +72,12 @@ for (x = 0; x < 4; x++) {
       randomNum
     ].style.backgroundColor = "#03a9f4";
     sectionTwo.children[1].children[x].children[randomNum].classList.add(
-      "green"
+      "blue"
     );
   }
 }
 
-const balls = document.querySelectorAll(".green");
+const balls = document.querySelectorAll(".blue");
 
 let missedNum = 0;
 fremdBallNum.textContent = missedNum;
@@ -86,7 +86,7 @@ balls.forEach((e) => {
     e.style.backgroundColor = "#673ab7";
   });
   e.addEventListener("pointerdown", () => {
-    e.classList.replace("green", "red");
+    e.classList.replace("blue", "red");
     missedNum++;
 
     fremdBallNum.textContent = missedNum;
