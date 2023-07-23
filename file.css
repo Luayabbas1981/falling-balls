@@ -30,25 +30,23 @@ span {
     justify-content: center;
 }
 
-
 .sectionOne {
     grid-column: 1;
     grid-row: 2;
-    background-color: #CDDC39;
+    background-color: #cddc39;
     color: #036ba3;
     font-size: 2vw;
     translate: 0 -40%;
     height: 120%;
 }
-.sectionOne h1{
+.sectionOne h1 {
     color: #9201ba;
 }
-.sectionOne >div{
+.sectionOne > div {
     display: flex;
     align-items: center;
     width: 80%;
     margin: auto;
-   
 }
 
 .sectionTwo {
@@ -56,7 +54,6 @@ span {
     grid-row: 1;
     width: 100%;
     background-color: #000000;
-   
 }
 .ballsDiv {
     display: grid;
@@ -130,40 +127,40 @@ span {
     }
 }
 @media (max-width: 767px) {
-    
-    h1{
+    h1 {
         font-size: 1rem;
     }
-    .main{
+    .main {
         margin-top: 8vh;
         grid-template-columns: 95%;
-       
     }
-    .ball{
+    .ball {
         width: 15vw;
         height: 15vw;
     }
     .ballColumn {
         animation: move 80s 1 alternate linear;
     }
-    button{
-        width: 90%;    
+    button {
+        width: 90%;
     }
-    .startGame , .tryAgain,h2{
+    .startGame,
+    .tryAgain,
+    h2 {
         font-size: 4vw;
         padding: 0.4rem;
-       
     }
-   
-    .fremdBallNum,.remainTime{
+
+    .fremdBallNum,
+    .remainTime {
         font-size: 5vw;
     }
-    .ballsDiv{
+    .ballsDiv {
         height: 78%;
     }
-    .sectionOne{
-       row-gap: 1rem;
-       font-size: 4vw;
-       height: 100%;
+    .sectionOne {
+        row-gap: 1rem;
+        font-size: 4vw;
+        height: 100%;
     }
 }

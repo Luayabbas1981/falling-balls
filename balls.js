@@ -8,7 +8,7 @@ document.body.appendChild(main);
 const sectionOne = document.createElement("section");
 sectionOne.className = "sectionOne";
 main.append(sectionOne);
-const btnContainer = document.createElement("div")
+const btnContainer = document.createElement("div");
 const speedDiv = document.createElement("div");
 speedDiv.classList.add("speedDiv");
 const startGame = document.createElement("button");
@@ -27,11 +27,7 @@ remainTime.classList.add("remainTime", "speedDivChild");
 const tryAgain = document.createElement("button");
 tryAgain.classList.add("tryAgain", "speedDivChild");
 tryAgain.textContent = "restart";
-sectionOne.append(
-  h2,
-  btnContainer,
- 
-);
+sectionOne.append(h2, btnContainer);
 btnContainer.append(
   startGame,
   remainTimeText,
@@ -39,7 +35,7 @@ btnContainer.append(
   fremdBall,
   fremdBallNum,
   tryAgain
-)
+);
 const speedDivChildren = document.querySelectorAll(".speedDivChild");
 speedDivChildren.forEach((e) => (e.style.margin = "5%"));
 const sectionTwo = document.createElement("section");
