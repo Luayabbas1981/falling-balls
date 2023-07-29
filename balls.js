@@ -5,6 +5,12 @@ h2.innerHTML = "Click on the <span> blue </span> balls";
 const main = document.createElement("section");
 main.className = "main";
 document.body.appendChild(main);
+const sectionTwo = document.createElement("section");
+main.appendChild(sectionTwo);
+sectionTwo.className = "sectionTwo";
+const ballsDiv = document.createElement("div");
+ballsDiv.classList.add("ballsDiv");
+sectionTwo.append(h1, ballsDiv);
 const sectionOne = document.createElement("section");
 sectionOne.className = "sectionOne";
 main.append(sectionOne);
@@ -38,12 +44,6 @@ btnContainer.append(
 );
 const speedDivChildren = document.querySelectorAll(".speedDivChild");
 speedDivChildren.forEach((e) => (e.style.margin = "5%"));
-const sectionTwo = document.createElement("section");
-main.appendChild(sectionTwo);
-sectionTwo.className = "sectionTwo";
-const ballsDiv = document.createElement("div");
-ballsDiv.classList.add("ballsDiv");
-sectionTwo.append(h1, ballsDiv);
 
 for (i = 0; i < 4; i++) {
   const ballColumn = document.createElement("div");
